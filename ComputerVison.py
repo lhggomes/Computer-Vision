@@ -12,4 +12,8 @@ grayImage = cv.cvtColor(imageValid, cv.COLOR_BGR2GRAY)
 faces = face_classifier.detectMultiScale(grayImage, 1.3, 5)
 
 for (x,y,w,h) in faces: 
-    cv.rectangle(grayImage,(x,y), (x+w, y+h), (255,0,0), 2)
+    cv.rectangle(imageValid,(x,y), (x+w, y+h), (255,0,0), 2)
+
+cv.imshow('imagem', imageValid)
+cv.waitKey(0)
+cv.destroyAllWindows()
