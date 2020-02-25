@@ -15,3 +15,8 @@ soccerPicture.itemset((0,0,2), 255)  #First is the positon, then the new RGB Col
 soccerPicture.itemset((0,0,1), 0) 
 soccerPicture.itemset((0,0,0), 0) 
 cv2.imwrite("soccer2.jpg", soccerPicture)
+
+#Region of interest 
+ball = soccerPicture[180:250, 250:315] #Fist the range of Y then the range of X
+soccerPicture[130:200, 200:265] = ball #Define the range to copy, than add it 
+cv2.imwrite('ball.jpg', soccerPicture)
