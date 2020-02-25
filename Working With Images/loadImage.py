@@ -10,3 +10,6 @@ cv2.imshow("ImagemCarregada", imageLoad)
 cv2.waitKey(0)
 #Function to Clear all the windows after the end of the Program
 cv2.destroyAllWindows()
+
+#Saving the image on the disk 
+cv2.imwrite("ImagemSalva.jpg", imageLoad)
