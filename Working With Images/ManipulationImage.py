@@ -9,3 +9,9 @@ print (soccerPicture.shape)
 
 #Show the information about the Pixels 
 print (soccerPicture.item(0,0,1)) # 0 = Blue Channel / 1 = Green Channel / 2 = Red Channel 
+
+#Changing the Pixels 
+soccerPicture.itemset((0,0,2), 255)  #First is the positon, then the new RGB Color
+soccerPicture.itemset((0,0,1), 0) 
+soccerPicture.itemset((0,0,0), 0) 
+cv2.imwrite("soccer2.jpg", soccerPicture)
