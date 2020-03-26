@@ -7,7 +7,7 @@ cap = cv2.VideoCapture('vasilha.mp4')
 
 while True:
     #Reading the Frame
-    img = cap.read()
+    _, img = cap.read()
     #Gray Scale
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     #Detect Faces
