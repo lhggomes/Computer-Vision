@@ -5,8 +5,6 @@ import os
 extensions = ['jpg', 'jpeg', 'JPG', 'JPEG', 'png', 'PNG']
 xml_detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
-
-
 class FaceDetector:
     def check_faces(self, photo):
         image = cv2.imread(photo)
@@ -23,7 +21,7 @@ class FaceDetector:
         for (x, y, w, h) in face_image:
             cv2.rectangle(image, (x, y), (x + w, y + h), (255, 0, 0), 2)
 
-        return face_image
+        return image
 
     def generate_faces(self):
         global extensions
@@ -32,7 +30,6 @@ class FaceDetector:
         ]
         for filename in photos_to_check:
             self.check_faces(filename)
-
 
 faces = FaceDetector()
 faces.generate_faces()
