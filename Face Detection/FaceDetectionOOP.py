@@ -11,8 +11,8 @@ class FaceDetector:
     def check_faces(self, photo):
         image = cv2.imread(photo)
         # Procedure to Generate the Name of the file
-        file_new_name = photo + "checked" + "jpg"
-        cv2.imwrite(file_new_name, self.generate_edit_image(photo))
+        file_new_name = "checked" +photo
+        cv2.imwrite(file_new_name, self.generate_edit_image(image))
 
     # Looking for all files on a Directory
 
