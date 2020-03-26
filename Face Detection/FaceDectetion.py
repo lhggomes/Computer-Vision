@@ -11,5 +11,6 @@ faceImage = faceCascade.detectMultiScale(gray, 1.1, 4)
 for (x, y, w, h) in faceImage:
     cv2.rectangle(img, (x,y), (x+w, y+h), (255,0,0), 2)
 cv2.imshow('Test', img)
+
 cv2.waitKey()
 cv2.destroyAllWindows()
