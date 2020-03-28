@@ -5,12 +5,11 @@ import os
 extensions = ['jpg', 'jpeg', 'JPG', 'JPEG', 'png', 'PNG']
 xml_detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
-
-class FaceDetector:
+class FaceDetector ():
     def check_faces(self, photo):
         image = cv2.imread(photo)
         # Procedure to Generate the Name of the file
-        file_new_name = "checked" + photo
+        file_new_name = "FE-" + photo
         cv2.imwrite(file_new_name, self.generate_edit_image(image))
 
     # Looking for all files on a Directory
