@@ -23,7 +23,7 @@ class FaceDetector ():
 
         return image
 
-    def generate_faces(self):
+    def main(self):
         global extensions
         photos_to_check = [
             filename for filename in os.listdir('.') if any(filename.endswith(ext) for ext in extensions)
@@ -33,4 +33,4 @@ class FaceDetector ():
 
 
 faces = FaceDetector()
-faces.generate_faces()
+faces.main()
