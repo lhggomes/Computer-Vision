@@ -2,7 +2,7 @@ import cv2
 import numpy as np 
 
 #Reading an Image from the Disk
-soccerPicture = cv2.imread('soccer.jpg')
+soccerPicture = cv2.imread('Photos/soccer.jpg')
 
 #Printing the data of the picture
 print (soccerPicture.shape)
